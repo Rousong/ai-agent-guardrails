@@ -69,7 +69,7 @@ If the project does not yet have an `AGENTS.md` document, create a project-level
 When initializing that document, it must include:
 - If you modify code files in this project, update this Markdown document at the same time.
 - A concise code overview for the project, such as what core functionality the project implements.
-- The project's directory structure tree.
+- The project's directory structure tree; every folder or file in the tree must be followed by `#` and a one-sentence summary of that directory or file.
 
 If the project already has an `AGENTS.md` document, supplement the existing document with the code overview and directory structure tree.
 
@@ -84,7 +84,7 @@ If you are working in an existing project and discover that a subdirectory does 
 When initializing that directory's `AGENTS.md`, the document must include:
 - If you modify code files in this directory, update this Markdown document at the same time.
 - A concise code overview for this directory, such as what functionality the code in this directory implements.
-- The structure tree for this directory.
+- The structure tree for this directory; every folder or file in the tree must be followed by `#` and a one-sentence summary of that directory or file.
 
 ---
 
