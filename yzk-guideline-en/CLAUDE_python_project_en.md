@@ -11,6 +11,8 @@
 
 ## Python Coding And Documentation Rules
 
+This is a strict project template intended for long-lived Python automation projects or projects maintained by multiple people or Agents. One-off scripts, test helpers, and exploratory scripts may simplify boilerplate when doing so does not reduce readability or maintainability.
+
 - When creating or updating a Python module, the file header must follow this format. `File:` must not be hardcoded to a specific filename and should be replaced with the current module filename:
 
 ```python
@@ -49,4 +51,8 @@ Returns:
 - All functions and methods must explicitly declare parameter types and return types.
 - If a function has many parameters or a complex return structure, the docstring must clearly describe the meaning, constraints, default values, and return structure.
 
-## The Following Section Is Updated Dynamically By The Agent (Project Overview And Structure Tree)
+## AI-Maintained Dynamic Section
+
+<!-- AI-DYNAMIC-SECTION:START -->
+This section is reserved for AI-maintained project overview and structure tree content for a concrete project. When appending content, edit only this section and do not change the general Python rules above.
+<!-- AI-DYNAMIC-SECTION:END -->
