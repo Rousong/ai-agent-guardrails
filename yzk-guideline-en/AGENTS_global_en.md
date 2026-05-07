@@ -70,6 +70,7 @@ When initializing that document, it must include:
 - If you modify code files in this project, update this Markdown document at the same time.
 - A concise code overview for the project, such as what core functionality the project implements.
 - The project's directory structure tree; every folder or file in the tree must be followed by `#` and a one-sentence summary of that directory or file.
+- The generated document should use English.
 
 If the project already has an `AGENTS.md` document, supplement the existing document with the code overview and directory structure tree.
 
@@ -85,6 +86,7 @@ When initializing that directory's `AGENTS.md`, the document must include:
 - If you modify code files in this directory, update this Markdown document at the same time.
 - A concise code overview for this directory, such as what functionality the code in this directory implements.
 - The structure tree for this directory; every folder or file in the tree must be followed by `#` and a one-sentence summary of that directory or file.
+- The generated document should use English.
 
 ---
 
