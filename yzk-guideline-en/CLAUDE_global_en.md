@@ -68,6 +68,14 @@ If the project does not yet have a `CLAUDE.md` document, create a project-level 
 
 When initializing that document, it must include:
 - If you modify code files in this project, update this Markdown document at the same time.
+- Before creating the code overview and directory structure, always insert the following user-defined rules block for project-level or subdirectory-related rules that the user may fill in later.
+
+```markdown
+<!-- USER-RULES:START -->
+<!-- Write user-defined rules here; if this block contains nothing except this comment, ignore this block. -->
+<!-- USER-RULES:END -->
+```
+
 - A concise code overview for the project, such as what core functionality the project implements.
 - The project's directory structure tree; every folder or file in the tree must be followed by `#` and a one-sentence summary of that directory or file.
 - The generated document should use English.
@@ -84,6 +92,14 @@ If you are working in an existing project and discover that a subdirectory does 
 
 When initializing that directory's `CLAUDE.md`, the document must include:
 - If you modify code files in this directory, update this Markdown document at the same time.
+- Before creating the code overview and structure tree, always insert the following user-defined rules block for this subdirectory's special rules that the user may fill in later.
+
+```markdown
+<!-- USER-SUBDIRECTORY-RULES:START -->
+<!-- Write user-defined subdirectory rules here; if this block contains nothing except this comment, ignore this block. -->
+<!-- USER-SUBDIRECTORY-RULES:END -->
+```
+
 - A concise code overview for this directory, such as what functionality the code in this directory implements.
 - The structure tree for this directory; every folder or file in the tree must be followed by `#` and a one-sentence summary of that directory or file.
 - The generated document should use English.
