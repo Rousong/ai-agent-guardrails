@@ -21,13 +21,17 @@ HarnessProject/ # AI Agent guideline 模板仓库，维护中英文 AGENTS / CLA
 ├─ yzk-guideline-cn/ # 我们维护的中文版 guideline 模板目录。
 │  ├─ AGENTS_global_cn.md # 中文 AGENTS 通用行为准则模板。
 │  ├─ AGENTS_python_project_cn.md # 中文 AGENTS Python 自动化项目规范模板。
+│  ├─ AGENTS_python_project_uv_cn.md # 中文 AGENTS Python 项目 uv 管理规范模板。
 │  ├─ CLAUDE_global_cn.md # 中文 CLAUDE 通用行为准则模板。
-│  └─ CLAUDE_python_project_cn.md # 中文 CLAUDE Python 自动化项目规范模板。
+│  ├─ CLAUDE_python_project_cn.md # 中文 CLAUDE Python 自动化项目规范模板。
+│  └─ CLAUDE_python_project_uv_cn.md # 中文 CLAUDE Python 项目 uv 管理规范模板。
 └─ yzk-guideline-en/ # 我们维护的英文版 guideline 模板目录。
    ├─ AGENTS_global_en.md # 英文 AGENTS 通用行为准则模板。
    ├─ AGENTS_python_project_en.md # 英文 AGENTS Python 自动化项目规范模板。
+   ├─ AGENTS_python_project_uv_en.md # 英文 AGENTS Python project uv workflow template.
    ├─ CLAUDE_global_en.md # 英文 CLAUDE 通用行为准则模板。
-   └─ CLAUDE_python_project_en.md # 英文 CLAUDE Python 自动化项目规范模板。
+   ├─ CLAUDE_python_project_en.md # 英文 CLAUDE Python 自动化项目规范模板。
+   └─ CLAUDE_python_project_uv_en.md # 英文 CLAUDE Python project uv workflow template.
 ```
 
 ## 固定维护规则

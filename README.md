@@ -24,13 +24,17 @@ ai-agent-guardrails/ # AI Agent guideline 模板仓库。
 ├─ yzk-guideline-cn/ # 我们维护的中文版 guideline 模板目录。
 │  ├─ AGENTS_global_cn.md # 中文 AGENTS 通用行为准则模板。
 │  ├─ AGENTS_python_project_cn.md # 中文 AGENTS Python 自动化项目规范模板。
+│  ├─ AGENTS_python_project_uv_cn.md # 中文 AGENTS Python 项目 uv 管理规范模板。
 │  ├─ CLAUDE_global_cn.md # 中文 CLAUDE 通用行为准则模板。
-│  └─ CLAUDE_python_project_cn.md # 中文 CLAUDE Python 自动化项目规范模板。
+│  ├─ CLAUDE_python_project_cn.md # 中文 CLAUDE Python 自动化项目规范模板。
+│  └─ CLAUDE_python_project_uv_cn.md # 中文 CLAUDE Python 项目 uv 管理规范模板。
 └─ yzk-guideline-en/ # 我们维护的英文版 guideline 模板目录。
    ├─ AGENTS_global_en.md # 英文 AGENTS 通用行为准则模板。
    ├─ AGENTS_python_project_en.md # 英文 AGENTS Python 自动化项目规范模板。
+   ├─ AGENTS_python_project_uv_en.md # 英文 AGENTS Python project uv workflow template.
    ├─ CLAUDE_global_en.md # 英文 CLAUDE 通用行为准则模板。
-   └─ CLAUDE_python_project_en.md # 英文 CLAUDE Python 自动化项目规范模板。
+   ├─ CLAUDE_python_project_en.md # 英文 CLAUDE Python 自动化项目规范模板。
+   └─ CLAUDE_python_project_uv_en.md # 英文 CLAUDE Python project uv workflow template.
 ```
 
 ## 各目录与文件说明
@@ -90,6 +94,24 @@ ai-agent-guardrails/ # AI Agent guideline 模板仓库。
   - 参数类型和返回值类型必须显式声明
   - 供 Agent 追加项目概述和结构树的明确动态区块
 
+### 3. `python_project_uv`
+
+文件：
+- `yzk-guideline-cn/AGENTS_python_project_uv_cn.md`
+- `yzk-guideline-cn/CLAUDE_python_project_uv_cn.md`
+- `yzk-guideline-en/AGENTS_python_project_uv_en.md`
+- `yzk-guideline-en/CLAUDE_python_project_uv_en.md`
+
+用途：
+- 存放使用 `uv` 管理 Python 项目的专用规范。
+- 适合叠加在 `global` 规则之上使用。
+- 当前内容包括：
+  - 使用 `uv venv`、`uv sync`、`uv run` 管理环境和执行命令
+  - 以 `pyproject.toml` 和 `uv.lock` 作为依赖声明与锁定文件
+  - 安装、删除、调整依赖后同步维护 `pyproject.toml` 和 `uv.lock`
+  - 非项目明确要求时，不把 `requirements.txt` 作为依赖事实来源
+  - 与现有 Python 主题一致的模块头、注释、`docstring` 和类型标注规范
+
 ## 如何应用到真实项目
 
 1. 先根据目标工具选择文档类型：
@@ -98,7 +120,9 @@ ai-agent-guardrails/ # AI Agent guideline 模板仓库。
 2. 再根据目标项目语言选择中英文版本：
    - 中文项目优先使用 `_cn`。
    - 英文项目优先使用 `_en`。
-3. 先复制或合并 `global` 主题，再按项目类型叠加专用主题，例如 Python 自动化项目再合并 `python_project`。
+3. 先复制或合并 `global` 主题，再按项目类型叠加专用主题，例如：
+   - 使用 `pip + requirements.txt` 的 Python 项目叠加 `python_project`
+   - 使用 `uv + pyproject.toml + uv.lock` 的 Python 项目叠加 `python_project_uv`
 4. 如果目标项目已经有自己的项目规则，不要直接覆盖；把本仓库模板与项目特定规则合并，保留更具体的项目要求。
 5. 合并后检查文档类型措辞是否正确：`AGENTS` 文件只写 `AGENTS.md`，`CLAUDE` 文件只写 `CLAUDE.md`。
 
@@ -143,7 +167,7 @@ python3 scripts/validate_guidelines.py --root /path/to/copied/repo
 
 建议按下面顺序操作：
 
-1. 先确认要修改的是哪个主题，例如 `global` 或 `python_project`。
+1. 先确认要修改的是哪个主题，例如 `global`、`python_project` 或 `python_project_uv`。
 2. 优先编辑 `yzk-guideline-cn/AGENTS_XXX_cn.md`。
 3. 再同步更新以下三份同主题文件：
    - `yzk-guideline-cn/CLAUDE_XXX_cn.md`
@@ -177,11 +201,11 @@ python3 scripts/validate_guidelines.py --root /path/to/copied/repo
 - 英文 `CLAUDE`：`CLAUDE_<topic>_en.md`
 
 其中：
-- `<topic>` 表示主题，例如 `global`、`python_project`
+- `<topic>` 表示主题，例如 `global`、`python_project`、`python_project_uv`
 - `_cn` 表示中文版本
 - `_en` 表示英文版本
 
 ## 说明
 
-- 这个仓库当前已经不再使用旧的 `ori`、`python` 命名方式，现以 `global`、`python_project` 为准。
+- 这个仓库当前已经不再使用旧的 `ori`、`python` 命名方式，现以 `global`、`python_project`、`python_project_uv` 等主题名为准。
 - 如果后续继续拆分更多项目场景，建议沿用当前的主题化命名方式，保持目录结构稳定、可预测。
